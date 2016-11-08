@@ -10,5 +10,6 @@ Tool for running a linux desktop for development purposes on windows.
 * Install the required Vagrant plugins:
 ```shell
 vagrant plugin install vagrant-hosts-provisioner
+vagrant plugin install vagrant-hosts
 ```
 
