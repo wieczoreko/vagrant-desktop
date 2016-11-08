@@ -9,7 +9,13 @@ Tool for running a linux desktop for development purposes on windows.
 * Install [Vagrant](https://vagrantup.com)
 * Install the required Vagrant plugins:
 ```shell
-vagrant plugin install vagrant-hosts-provisioner
-vagrant plugin install vagrant-hosts
+$ vagrant plugin install vagrant-hosts-provisioner
+$ vagrant plugin install vagrant-hosts
 ```
 
+
+# Usage 
+
+```shell
+$ vagrant up
+```
