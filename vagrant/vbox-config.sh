@@ -5,4 +5,4 @@ sudo VBoxClient --display
 sudo VBoxClient --checkhostversion
 sudo VBoxClient --seamless
 
-sleep 5
+sleep 3

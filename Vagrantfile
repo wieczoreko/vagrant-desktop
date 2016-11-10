@@ -22,9 +22,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", "4096", "--cpus", "2", "--ioapic", "on"]
     end
     master.vm.provision :hosts, :sync_hosts => true
-    master.vm.provision :shell, :path => "vagrant/system-prep.sh"
-    master.vm.provision :shell, :path => "vagrant/vbox-config.sh"
-    master.vm.provision "shell", inline: "sudo startx&"
+    master.vm.provision "shell", path:   "vagrant/system-prep.sh"
+    # Configure vagrant user environment as vagrant user.
+    master.vm.provision "shell", privileged: false, path:   "vagrant/user-config.sh"
+    master.vm.provision "shell", path:   "vagrant/vbox-config.sh"
+    master.vm.provision "shell", inline: "/usr/bin/startx &"
   end
 
 end
