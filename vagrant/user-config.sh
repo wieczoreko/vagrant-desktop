@@ -1,8 +1,6 @@
 #!/bin/bash
 # Configure vagrant user environment
 
-
-whoami
 # Install my personal dotfiles. Take it or leave it.
 git clone https://github.com/mgla/dotfiles /home/vagrant/dotfiles && /home/vagrant/dotfiles/deploy
 
