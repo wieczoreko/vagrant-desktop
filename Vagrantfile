@@ -16,6 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     master.vm.network    "private_network", ip: "192.168.33.10"
     master.vm.network    "forwarded_port", guest: 8000, host: 8000
     master.vm.synced_folder ".", "/home/vagrant/vagrant-desktop", create: true
+    master.vm.synced_folder "~", "/home/vagrant/host-home", create: true
     # Settings for VirtualBox
     master.vm.provider "virtualbox" do |vb|
       vb.gui = true
