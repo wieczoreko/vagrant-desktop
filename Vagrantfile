@@ -20,7 +20,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Settings for VirtualBox
     master.vm.provider "virtualbox" do |vb|
       vb.gui = true
-      vb.customize ["modifyvm", :id, "--memory", "4096", "--cpus", "2", "--ioapic", "on"]
+      vb.customize ["modifyvm", :id,
+        "--memory", "4096",
+        "--vram", "32",
+        "--cpus", "2",
+        "--ioapic", "on"
+      ]
     end
     master.vm.provision :hosts, :sync_hosts => true
     master.vm.provision "shell", path:   "vagrant/system-prep.sh"
