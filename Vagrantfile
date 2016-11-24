@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Configure vagrant user environment as vagrant user.
     master.vm.provision "shell", privileged: false, path:   "vagrant/user-config.sh"
     master.vm.provision "shell", path:   "vagrant/vbox-config.sh"
-    master.vm.provision "shell", inline: "/usr/bin/startx &"
+    master.vm.provision "shell", inline: "/bin/systemctl start lightdm"
   end
 
 end
