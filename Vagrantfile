@@ -3,8 +3,6 @@
 VAGRANTFILE_API_VERSION = "2"
 VAGRANT_DEFAULT_PROVIDER = "virtualbox"
 
-require 'vagrant-hosts-provisioner'
-
 hostname_prefix = 'local01-'
 domain = 'local'
 
