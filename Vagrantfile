@@ -1,5 +1,6 @@
 # -*- mode: ruby -*-
 
+
 VAGRANTFILE_API_VERSION = "2"
 VAGRANT_DEFAULT_PROVIDER = "virtualbox"
 
